@@ -15,11 +15,12 @@ string[] NewArray(string[] str)
 {
     int size = 0;
     string[] array = new string[str.Length];
-    foreach (var value in str)
+
+    for (int i = 0; i < str.Length; i++)
     {
-        if (value.Length <= 3)
+        if (str[i].Length <= 3)
         {
-            array[size] = value;
+            array[size] = str[i];
             size++;
         }
     }
@@ -30,7 +31,7 @@ string[] NewArray(string[] str)
         newArr[i] = array[i];
     }
 
-    return newArr;
+    return array;
 }
 
 void PrintArray(string[] array)
